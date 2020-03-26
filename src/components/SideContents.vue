@@ -1,7 +1,7 @@
 <template lang="html">
   <div class='col-3'>
     <vs-avatar history history-gradient circle size='50' class='d-inline-block align-middle'>
-      <img src='@/assets/logo.png' alt=''>
+      <img :src='sample_img_path' alt=''>
     </vs-avatar>
     <div class='d-inline-block align-middle ml-3 user-name-text-size'>
       <b>tettyanman99</b><br />
@@ -10,7 +10,7 @@
     <div class='mt-3'>
       <SideContentCard
         header_title='ストーリーズ'
-        icon_img_path='@/assets/logo.png'
+        :icon_img_path='sample_img_path'
         user_name='test.user'
         sub_information='16時間前'
         contents_type='stories'
@@ -18,7 +18,7 @@
       <SideContentCard
         class='mt-2'
         header_title='おすすめ'
-        icon_img_path='@/assets/logo.png'
+        :icon_img_path='sample_img_path'
         user_name='test.user'
         sub_information='test.userがフォロー中'
         contents_type='recommend_users'
@@ -30,8 +30,15 @@
 <script>
 import SideContentCard from '@/components/SideContentCard.vue'
 
+const sample_image = require('@/assets/logo.png')
+
 export default {
   name: 'SideContents',
+  data() {
+    return {
+      sample_img_path: sample_image
+    }
+  },
   components: {
     SideContentCard
   }

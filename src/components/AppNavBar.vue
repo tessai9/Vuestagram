@@ -1,7 +1,6 @@
 <template lang="html">
-  <b-navbar variant="white" class="border-bottom px-5">
+  <b-navbar variant="white" class="border-bottom px-5" sticky=true>
     <b-navbar-brand href="#">Vuestagram</b-navbar-brand>
-
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
       <b-nav-text>
@@ -11,7 +10,7 @@
       </b-nav-text>
     </b-navbar-nav>
     <vs-avatar history history-gradient circle size='30'>
-      <img src="../assets/logo.png" alt="">
+      <img src="@/assets/logo.png" alt="">
     </vs-avatar>
   </b-navbar>
 </template>
