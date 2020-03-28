@@ -20,17 +20,18 @@
             <box-icon name='bookmark' size='md' class='float-right'></box-icon>
           </b-container>
           <b-container class='px-3 mt-0'>
-            <b class='mr-1'>{{ display_user_name }}</b><span>{{ description }}</span>
+            <b class='mr-1'>{{ display_user_name }}</b>
+            <span>{{ description }}</span>
           </b-container>
         </b-card-text>
       </b-card>
     </b-card-group>
-    <ModalForPost :active="modal_active" />
+    <TimelineMenuModal :active="modal_active" />
   </div>
 </template>
 
 <script>
-import ModalForPost from '@/components/ModalForPost.vue'
+import TimelineMenuModal from '@/components/TimelineMenuModal.vue'
 
 export default {
   name: 'TimelineCard',
@@ -46,10 +47,16 @@ export default {
     }
   },
   components: {
-    ModalForPost
+    TimelineMenuModal
   }
 }
 </script>
 
 <style lang="css" scoped>
+.body-max-width {
+  max-width: 935px;
+}
+.post-item-max-width {
+  max-width: 614px;
+}
 </style>

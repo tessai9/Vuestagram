@@ -28,10 +28,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.body-max-width {
-  max-width: 935px;
-}
-.post-item-max-width {
-  max-width: 614px;
-}
 </style>

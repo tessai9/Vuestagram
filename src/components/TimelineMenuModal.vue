@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'ModalForPost',
+  name: 'TimelineMenuModal',
   props: {
     active: { type: Boolean, default: false }
   }
