@@ -1,38 +1,14 @@
-<template lang="html">
-  <vs-dialog not-close v-model="active">
-    <template #header>
-      <h4 class="not-margin">
-        Welcome to <b>Vuesax</b>
-      </h4>
-    </template>
-    <div class="con-form">
-      <vs-input v-model="input1" placeholder="Email">
-        <template #icon>
-          @
-        </template>
-      </vs-input>
-      <vs-input type="password" v-model="input2" placeholder="Password">
-        <template #icon>
-          <i class='bx bxs-lock'></i>
-        </template>
-      </vs-input>
-      <div class="flex">
-        <vs-checkbox v-model="checkbox1">Remember me</vs-checkbox>
-        <a href="#">Forgot Password?</a>
-      </div>
-    </div>
-
-    <template #footer>
-      <div class="footer-dialog">
-        <vs-button block>
-          Sign In
-        </vs-button>
-
-        <div class="new">
-          New Here? <a href="#">Create New Account</a>
-        </div>
-      </div>
-    </template>
+<template lang='html'>
+  <vs-dialog not-close not-padding v-model='active'>
+    <b-list-group class='text-center'>
+      <b-list-group-item class='text-danger'>不適切な投稿を報告</b-list-group-item>
+      <b-list-group-item class='text-danger'>フォローをやめる</b-list-group-item>
+      <b-list-group-item>投稿へ移動</b-list-group-item>
+      <b-list-group-item>シェア</b-list-group-item>
+      <b-list-group-item>リンクをコピー</b-list-group-item>
+      <b-list-group-item>埋め込み</b-list-group-item>
+      <b-list-group-item>キャンセル</b-list-group-item>
+    </b-list-group>
   </vs-dialog>
 </template>
 
@@ -40,7 +16,8 @@
 export default {
   name: 'TimelineMenuModal',
   props: {
-    active: { type: Boolean, default: false }
+    active: { type: Boolean, default: false },
+    id: { tyoe: Number, required: true }
   }
 }
 </script>
