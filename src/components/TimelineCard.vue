@@ -8,7 +8,7 @@
       <box-icon name='dots-horizontal-rounded' class='float-right' @click='openPostMenu'></box-icon>
     </div>
     <div>
-      <img :src='posted_img_path' alt='' class="w-100">
+      <img :src='posted_img_path' alt='' class='w-100'>
     </div>
     <b-card-text>
       <b-container class='px-3 pt-2'>
@@ -22,12 +22,14 @@
         <span>{{ description }}</span>
       </b-container>
     </b-card-text>
+    <b-row class='post-comment-area'>
+      <b-col class='px-2' cols='9'><vs-input white label-placeholder='コメントを追加...' v-model='comment' /></b-col>
+      <b-col class='text-primary'><a href='#' class='comment-text-size'>投稿する</a></b-col>
+    </b-row>
   </b-card>
 </template>
 
 <script>
-
-
 export default {
   name: 'TimelineCard',
   props: {
@@ -36,6 +38,11 @@ export default {
     posted_img_path: { type: String, required: true },
     display_user_name: { type: String, default: '' },
     description: { type: String, default: '' }
+  },
+  data() {
+    return {
+      comment: ''
+    }
   },
   methods: {
     openPostMenu() {
@@ -51,5 +58,12 @@ export default {
 }
 .post-item-max-width {
   max-width: 614px;
+}
+.post-comment-area {
+  height: 2.5rem;
+  align-items: center;
+}
+.comment-text-size {
+  font-size: 0.8rem;
 }
 </style>

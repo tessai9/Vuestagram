@@ -33,6 +33,9 @@ export default {
     openDialog(post_id) {
       this.modal_target_id = post_id
       this.modal_active = !this.modal_active
+    },
+    closeDialog() {
+
     }
   },
   components: {
