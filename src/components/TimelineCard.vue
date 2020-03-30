@@ -1,5 +1,5 @@
 <template lang='html'>
-  <b-card body-class='p-0' class='post-item-max-width' header-bg-variant='white'>
+  <b-card body-class='p-0' class='post-item-max-width' header-bg-variant='white' footer-bg-variant='white'>
     <div slot='header'>
       <vs-avatar history history-gradient circle size='30' class='d-inline-block align-middle'>
         <img v-if='icon_img_path' :src='icon_img_path' alt='' />
@@ -22,10 +22,16 @@
         <span>{{ description }}</span>
       </b-container>
     </b-card-text>
-    <b-row class='post-comment-area'>
-      <b-col class='px-2' cols='9'><vs-input white label-placeholder='コメントを追加...' v-model='comment' /></b-col>
-      <b-col class='text-primary'><a href='#' class='comment-text-size'>投稿する</a></b-col>
-    </b-row>
+    <div slot='footer' class='post-comment-area text-center'>
+      <b-row no-gutters=true align-v='center'>
+        <b-col class='px-0' cols='9'>
+          <vs-input type='text' label-placeholder='コメントを追加...' v-model='comment' />
+        </b-col>
+        <b-col class='text-primary'>
+          <a href='#' class='comment-text-size'>投稿する</a>
+        </b-col>
+      </b-row>
+    </div>
   </b-card>
 </template>
 
@@ -62,6 +68,7 @@ export default {
 .post-comment-area {
   height: 2.5rem;
   align-items: center;
+  padding: 0;
 }
 .comment-text-size {
   font-size: 0.8rem;
