@@ -5,7 +5,7 @@
         <img v-if='icon_img_path' :src='icon_img_path' alt='' />
       </vs-avatar>
       <span class='align-middle ml-3'>{{ display_user_name }}</span>
-      <box-icon name='dots-horizontal-rounded' class='float-right' @click='openPostMenu'></box-icon>
+      <box-icon name='dots-horizontal-rounded' class='float-right card-menu' @click='openPostMenu'></box-icon>
     </div>
     <div>
       <img :src='posted_img_path' alt='' class='w-100'>
@@ -72,5 +72,8 @@ export default {
 }
 .comment-text-size {
   font-size: 0.8rem;
+}
+.card-menu {
+  cursor: pointer;
 }
 </style>

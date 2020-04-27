@@ -1,4 +1,4 @@
-<template lang='html'>
+<template lang='html' functional>
   <b-navbar variant='white' class='border-bottom px-5' sticky=true>
     <b-navbar-brand href='#'>Vuestagram</b-navbar-brand>
     <!-- Right aligned nav items -->
